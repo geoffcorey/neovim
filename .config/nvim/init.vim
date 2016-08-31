@@ -73,7 +73,7 @@ Plug 'vim-ruby/vim-ruby'
 "
 " Ansible 
 "
-Plug 'chase/vim-ansible-yaml'
+Plug 'avakhov/vim-yaml'
 "
 " Salt Stack
 "
