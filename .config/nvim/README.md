@@ -9,7 +9,7 @@
 * [christoomey/vim-tmux-navigator](https://github.com/christoomey/vim-tmux-navigator)
 * [godlygeek/tabular](https://github.com/godlygeek/tabular)
 * [jamessan/vim-gnupg](https://github.com/jamessan/vim-gnupg)
-* [kien/ctrlp](https://github.com/kien/ctrlp.vim)
+* [ctrlpvim/ctrlp](https://github.com/ctrlpvim/ctrlp.vim)
 * [majutsushi/tagbar](https://github.com/majutsushi/tagbar)
 * [mattn/emmet-vim](https://github.com/mattn/emmet-vim)
 * [mhinz/vim-signify](https://github.com/mhinz/vim-signify)
