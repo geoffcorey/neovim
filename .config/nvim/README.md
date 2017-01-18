@@ -47,7 +47,7 @@
 
 ## Markdown
 
-* [](https://github.com/tpope/vim-markdown)
+* [euclio/vim-markdown-composer](https://github.com/euclio/vim-markdown-composer)
 
 ## Ruby/Rails/Cucumber
 

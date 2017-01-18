@@ -57,8 +57,13 @@ Plug 'othree/yajs', { 'for':'javascript'}
 " 
 " Markdown
 " 
-"Plug 'plasticboy/vim-markdown'
-Plug 'tpope/vim-markdown'
+function! BuildComposer(info)
+  if a:info.status != 'unchanged' || a:info.force
+    !cargo build --release
+  endif
+endfunction
+
+Plug 'euclio/vim-markdown-composer', { 'do': function('BuildComposer') }
 " 
 " Ruby/Rails/Cucumber
 " 
@@ -117,19 +122,7 @@ let &t_AB="\e[48;5;%dm"
 let &t_AF="\e[38;5;%dm"
 " Airline
 let g:airline_theme="distinguished"
-" Prettify JSON files
-"autocmd BufRead,BufNewFile *.json set filetype=json
-"autocmd Syntax json sou ~/.vim/syntax/json.vim
 syn on 
-
-" Prettify Vagrantfile
-autocmd BufRead,BufNewFile Vagrantfile set filetype=ruby
-
-" Prettify Markdown files
-augroup markdown
-  au!
-  au BufNewFile,BufRead *.md,*.markdown setlocal filetype=ghmarkdown
-augroup END
 
 " Highlight characters that go over 80 columns (by drawing a border on the 81st)
 "if exists('+colorcolumn')
@@ -228,15 +221,6 @@ set foldlevel=2
 " Filetype: markdown
 " ----------------------------------------
 
-" Variable to highlight markdown fenced code properly -- uses tpope's
-" vim-markdown plugin (which is bundled with vim7.4 now)
-" There are more syntaxes, but checking for them makes editing md very slow
-let g:vim_markdown_folding_disabled=1
-let g:markdown_fenced_languages = [
-      \ 'html',
-      \ 'javascript', 'js=javascript', 'json=javascript',
-      \ 'sass',
-      \ ]
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " 06. Custom Commands                                                        "
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
