@@ -1,35 +1,34 @@
 # NeoVIM Plugins / config
 
 ## Standard
-* [airblade/vim-gitgutter](https://github.com/airblade/vim-gitgutter)
-* [atelierbram/vim-colors_atelier-schemes](https://github.com/atelierbram/vim-colors_atelier-schemes)
-* [bling/vim-airline](https://github.com/bling/vim-airline)
-* [vim-airline/vim-airline-themes](https://github.com/vim-airline/vim-airline-themes)
-* [chriskempson/vim-tomorrow-theme](https://github.com/chriskempson/vim-tomorrow-theme)
-* [christoomey/vim-tmux-navigator](https://github.com/christoomey/vim-tmux-navigator)
-* [godlygeek/tabular](https://github.com/godlygeek/tabular)
-* [jamessan/vim-gnupg](https://github.com/jamessan/vim-gnupg)
-* [ctrlpvim/ctrlp](https://github.com/ctrlpvim/ctrlp.vim)
-* [majutsushi/tagbar](https://github.com/majutsushi/tagbar)
-* [mattn/emmet-vim](https://github.com/mattn/emmet-vim)
-* [mhinz/vim-signify](https://github.com/mhinz/vim-signify)
-* [nicholaides/words-to-avoid](https://github.com/nicholaides/words-to-avoid.vim)
-* [PotatoesMaster/i3-vim-syntax](https://github.com/PotatoesMaster/i3-vim-syntax)
-* [scrooloose/nerdcommenter](https://github.com/scrooloose/nerdcommenter)
-* [scrooloose/nerdtree](https://github.com/scrooloose/nerdtree)
-* [scrooloose/syntastic](https://github.com/scrooloose/syntastic)
-* [szw/vim-tags](https://github.com/szw/vim-tags)
-* [tpope/vim-dispatch](https://github.com/tpope/vim-dispatch)
-* [tpope/vim-fugitive](https://github.com/tpope/vim-fugitive)
-* [tpope/vim-obsession](https://github.com/tpope/vim-obsession)
-* [tpope/vim-surround](https://github.com/tpope/vim-surround)
-* [vim-scripts/greplace](https://github.com/vim-scripts/greplace.vim)
-* [tomtom/tcomment_vim](https://github.com/tomtom/tcomment_vim)
-* [Valloric/YouCompleteMe](https://github.com/Valloric/YouCompleteMe)
+* [airblade/vim-gitgutter](https://github.com/airblade/vim-gitgutter)                                  - git diff in the gutter (sign column)
+* [atelierbram/vim-colors_atelier-schemes](https://github.com/atelierbram/vim-colors_atelier-schemes)  - Atelier themes 16-color
+* [bling/vim-airline](https://github.com/bling/vim-airline)                                            - Status/tabline
+* [vim-airline/vim-airline-themes](https://github.com/vim-airline/vim-airline-themes)                  - Status/tabline themes
+* [christoomey/vim-tmux-navigator](https://github.com/christoomey/vim-tmux-navigator)                  - Allow navigating between vim/tmux
+* [godlygeek/tabular](https://github.com/godlygeek/tabular)                                            - Aligning text
+* [jamessan/vim-gnupg](https://github.com/jamessan/vim-gnupg)                                          - Transparent editing of gpg encrypted files
+* [ctrlpvim/ctrlp](https://github.com/ctrlpvim/ctrlp.vim)                                              - Full path fuzzy file, buffer, mru, tag finder
+* [majutsushi/tagbar](https://github.com/majutsushi/tagbar)                                            - Browse tags of the current file
+* [mattn/emmet-vim](https://github.com/mattn/emmet-vim)                                                - Expanding abbreviations
+* [mhinz/vim-signify](https://github.com/mhinz/vim-signify)                                            - Show differences in file
+* [nicholaides/words-to-avoid](https://github.com/nicholaides/words-to-avoid.vim)                      - Highlight words to avoid in tech writing
+* [PotatoesMaster/i3-vim-syntax](https://github.com/PotatoesMaster/i3-vim-syntax)                      - Syntax highlighting i3 config file
+* [scrooloose/nerdcommenter](https://github.com/scrooloose/nerdcommenter)                              - Comment functions
+* [scrooloose/nerdtree](https://github.com/scrooloose/nerdtree)                                        - Directory tree
+* [scrooloose/syntastic](https://github.com/scrooloose/syntastic)                                      - Syntax highlighting
+* [szw/vim-tags](https://github.com/szw/vim-tags)                                                      - Ctags generator
+* [tpope/vim-dispatch](https://github.com/tpope/vim-dispatch)                                          - Kick off builds/test suites
+* [tpope/vim-fugitive](https://github.com/tpope/vim-fugitive)                                          - Git wrapper
+* [tpope/vim-obsession](https://github.com/tpope/vim-obsession)                                        - Save current state of Vim (used with tmuximator)
+* [tpope/vim-surround](https://github.com/tpope/vim-surround)                                          - Surround things
+* [vim-scripts/greplace](https://github.com/vim-scripts/greplace.vim)                                  - Replace over multiple files
+* [tomtom/tcomment_vim](https://github.com/tomtom/tcomment_vim)                                        - Comment functions
+* [Valloric/YouCompleteMe](https://github.com/Valloric/YouCompleteMe)                                  - Code Completion
 
 ## Go Language
 
-* [faith/vim-go](https://github.com/fatih/vim-go)
+* [faith/vim-go](https://github.com/fatih/vim-go) - Golang support
 
 ## Javascript / Node.js
 

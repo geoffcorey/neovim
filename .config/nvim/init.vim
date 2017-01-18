@@ -109,17 +109,29 @@ autocmd BufReadPost *
 """""""""""""""
 " 03 Theme Colors 
 """""""""""""""
-" Color scheme
+" Color scheme atelier-schemes
+syntax enable
 set background=dark
-"colorscheme Tomorrow-Night-Bright
-"colorscheme base16-atelierheath
-"colorscheme base16-atelierdune
-set t_Co=256
-"colorscheme colorsbox-stnight
+" or, for the light background mode:
+" set background=light
+" colorscheme base16-atelierdune
+" or any of the other schemes:
+" colorscheme base16-atelierforest
+" colorscheme base16-atelierplateau
+" colorscheme base16-atelierheath
+" colorscheme base16-ateliercave
+" colorscheme base16-ateliersulphurpool
+" colorscheme base16-atelierlakeside
+" colorscheme base16-ateliersavanna
+" colorscheme base16-atelierseaside
+" colorscheme base16-atelierdune
+" colorscheme base16-atelierestuary
+"
+" 256 color scheme
 colorscheme CandyPaper
-"xset t_Co=256              " enable 256-color mode.
-let &t_AB="\e[48;5;%dm"
-let &t_AF="\e[38;5;%dm"
+set t_Co=256              " enable 256-color mode.
+" let &t_AB="\e[48;5;%dm"
+" let &t_AF="\e[38;5;%dm"
 " Airline
 let g:airline_theme="distinguished"
 syn on 
