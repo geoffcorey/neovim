@@ -94,7 +94,7 @@ set tabstop=2
 set textwidth=80
 set title                         " let vim set the terminal title
 set updatetime=100                " redraw the status bar often
-
+set maxmempattern=5000
 " neovim specific settings
 if has('nvim')
     " Set the Python binaries neovim is using. Please note that you will need to
@@ -495,9 +495,10 @@ au Filetype go nmap <leader>gah <Plug>(go-alternate-split)
 au Filetype go nmap <leader>gav <Plug>(go-alternate-vertical)
 au FileType go nmap <leader>gt :GoDeclsDir<cr>
 au FileType go nmap <leader>gc <Plug>(go-coverage-toggle)
-au FileType go nmap <leader>gd <Plug>(go-def)
-au FileType go nmap <leader>gdv <Plug>(go-def-vertical)
-au FileType go nmap <leader>gdh <Plug>(go-def-horizontal)
+"au FileType go nmap <leader>gd <Plug>(go-def)
+au FileType go nmap <leader>gd <Plug>(go-def-vertical)
+"au FileType go nmap <leader>gdv <Plug>(go-def-vertical)
+"au FileType go nmap <leader>gdh <Plug>(go-def-horizontal)
 au FileType go nmap <leader>gD <Plug>(go-doc)
 au FileType go nmap <leader>gDv <Plug>(go-doc-vertical)
 
