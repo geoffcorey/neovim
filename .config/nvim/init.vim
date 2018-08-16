@@ -38,6 +38,7 @@ Plug 'sbdchd/neoformat'
 Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/nerdtree'
 Plug 'sebdah/vim-delve'
+Plug 'sheerun/vim-polyglot'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
@@ -103,7 +104,7 @@ if has('nvim')
     " example:
     " pip3.6 install -U neovim
     let g:python_host_prog = '/usr/local/bin/python2.7'
-    let g:python3_host_prog = '/usr/local/bin/python3.6'
+    let g:python3_host_prog = '/usr/local/bin/python3.7'
 endif
 
 " Enable mouse if possible
