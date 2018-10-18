@@ -4,6 +4,8 @@
 " Download vim-plug from the URL below and follow the installation
 " instructions:
 " https://github.com/junegunn/vim-plug
+"
+" install globaly: npm i -g eslint babel-eslint eslint-plugin-react prettier eslint-config-prettier eslint-plugin-prettier eslint-plugin-import stylelint eslint-config-airbnb eslint-plugin-jsx-a11y
 "----------------------------------------------
 call plug#begin('~/.vim/plugged')
 
@@ -20,6 +22,7 @@ Plug 'Shougo/neosnippet-snippets'  " Default snippets for many languages
 Plug 'Shougo/vimproc.vim', {'do' : 'make'}  " Needed to make sebdah/vim-delve work on Vim
 Plug 'Shougo/vimshell.vim'                  " Needed to make sebdah/vim-delve work on Vim
 Plug 'bling/vim-airline'
+Plug 'chrisbra/NrrwRgn'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'ctrlpvim/ctrlp.vim'          " CtrlP is installed to support tag finding in vim-go
 Plug 'easymotion/vim-easymotion'
@@ -38,13 +41,21 @@ Plug 'sbdchd/neoformat'
 Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/nerdtree'
 Plug 'sebdah/vim-delve'
-Plug 'sheerun/vim-polyglot'
+" Plug 'sheerun/vim-polyglot'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 " Plug 'vimwiki/vimwiki'
+Plug 'w0rp/ale'
 
 " Language support
+Plug 'nikvdp/ejs-syntax'
+Plug 'pangloss/vim-javascript'
+Plug 'mxw/vim-jsx'
+Plug 'jelera/vim-javascript-syntax'
+Plug 'tpope/vim-jdaddy' "Json text objects
+Plug 'tweekmonster/braceless.vim' " text objects and more for Python and other indented code
+let g:jsx_ext_required = 0
 Plug 'aklt/plantuml-syntax'
 Plug 'cespare/vim-toml'
 Plug 'dag/vim-fish'
