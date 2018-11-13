@@ -52,6 +52,7 @@ Plug 'w0rp/ale'
 Plug 'ludovicchabant/vim-gutentags' " <C-j>
 Plug 'nikvdp/ejs-syntax'
 Plug 'pangloss/vim-javascript'
+Plug 'maksimr/vim-jsbeautify'
 Plug 'mxw/vim-jsx'
 Plug 'jelera/vim-javascript-syntax'
 Plug 'tpope/vim-jdaddy' "Json text objects
@@ -92,7 +93,7 @@ set colorcolumn=81                " highlight the 80th column as an indicator
 set completeopt-=preview          " remove the horrendous preview window
 set cursorline                    " highlight the current line for the cursor
 set encoding=utf-8
-set expandtab                     " expands tabs to spaces
+"set expandtab                     " expands tabs to spaces
 set list                          " show trailing whitespace
 set listchars=tab:\|\ ,trail:▫
 set nospell                       " disable spelling
@@ -104,8 +105,8 @@ set number                        " show number ruler
 set relativenumber                " show relative numbers in the ruler
 set ruler
 set formatoptions=tcqron          " set vims text formatting options
-set softtabstop=2
-set tabstop=2
+"set softtabstop=2
+"set tabstop=2
 "set textwidth=80
 set title                         " let vim set the terminal title
 set updatetime=100                " redraw the status bar often
@@ -505,15 +506,24 @@ let g:multi_cursor_skip_key='<C-b>'
 "----------------------------------------------
 " Enable completing of go pointers
 let g:deoplete#sources#go#pointer = 1
-
+"----------------------------------------------
+" Language: Javascript
+"----------------------------------------------
+".vimrc
+map <c-f> :call JsBeautify()<cr>
+" or
+au FileType javascript noremap <buffer>  <c-f> :call JsBeautify()<cr>
+" for json
+au FileType json noremap <buffer> <c-f> :call JsonBeautify()<cr>
+" for jsx
+au FileType jsx noremap <buffer> <c-f> :call JsxBeautify()<cr>
+" for html
+au FileType html noremap <buffer> <c-f> :call HtmlBeautify()<cr>
+" for css or scss
+au FileType css noremap <buffer> <c-f> :call CSSBeautify()<cr>
 "----------------------------------------------
 " Language: Golang
 "----------------------------------------------
-au FileType go set noexpandtab
-au FileType go set shiftwidth=4
-au FileType go set softtabstop=4
-au FileType go set tabstop=4
-
 " Mappings
 au FileType go nmap <F9> :GoCoverageToggle -short<cr>
 au FileType go nmap <F10> :GoTest -short<cr>
@@ -649,6 +659,14 @@ au FileType gitconfig set softtabstop=2
 au FileType gitconfig set tabstop=2
 
 "----------------------------------------------
+" Language: Golang
+"----------------------------------------------
+au FileType go set noexpandtab
+au FileType go set shiftwidth=4
+au FileType go set softtabstop=4
+au FileType go set tabstop=4
+
+"----------------------------------------------
 " Language: HTML
 "----------------------------------------------
 au FileType html set expandtab
@@ -659,10 +677,14 @@ au FileType html set tabstop=2
 "----------------------------------------------
 " Language: JavaScript
 "----------------------------------------------
-au FileType javascript set expandtab
-au FileType javascript set shiftwidth=2
-au FileType javascript set softtabstop=2
-au FileType javascript set tabstop=2
+au FileType javascript set noexpandtab
+au FileType javascript set shiftwidth=4
+au FileType javascript set softtabstop=4
+au FileType javascript set tabstop=4
+"au FileType javascript set expandtab
+"au FileType javascript set shiftwidth=2
+"au FileType javascript set softtabstop=2
+"au FileType javascript set tabstop=2
 
 "----------------------------------------------
 " Language: JSON
