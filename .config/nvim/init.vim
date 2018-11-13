@@ -49,6 +49,7 @@ Plug 'tpope/vim-surround'
 Plug 'w0rp/ale'
 
 " Language support
+Plug 'ludovicchabant/vim-gutentags' " <C-j>
 Plug 'nikvdp/ejs-syntax'
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
@@ -68,10 +69,11 @@ Plug 'kylef/apiblueprint.vim'
 Plug 'lifepillar/pgsql.vim'
 Plug 'nsf/gocode', { 'rtp': 'vim', 'do': '~/.vim/plugged/gocode/vim/symlink.sh' }
 Plug 'plasticboy/vim-markdown'
+Plug 'ternjs/tern_for_vim', { 'do': 'npm install && npm install -g tern' }
 Plug 'tclh123/vim-thrift'
 Plug 'zchee/deoplete-go', { 'do': 'make'}
 Plug 'zchee/deoplete-jedi'
-Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern' }
+Plug 'carlitux/deoplete-ternjs'
 " Colorschemes
 Plug 'NLKNguyen/papercolor-theme'
 
@@ -262,6 +264,18 @@ autocmd BufEnter NERD_tree_* :call BookmarkUnmapKeys()
 if has('nvim')
     " Enable deoplete on startup
     let g:deoplete#enable_at_startup = 1
+    let g:deoplete#enable_ignore_case = 1
+    let g:deoplete#enable_smart_case = 1
+    let g:deoplete#enable_camel_case = 1
+    let g:deoplete#enable_refresh_always = 1
+    let g:deoplete#max_abbr_width = 0
+    let g:deoplete#max_menu_width = 0
+    let g:deoplete#omni#input_patterns = get(g:,'deoplete#omni#input_patterns',{})
+
+    let g:tern_request_timeout = 1
+    let g:tern_request_timeout = 6000
+    let g:tern#command = ["tern"]
+    let g:tern#arguments = [" — persistent"]
 endif
 
 " Disable deoplete when in multi cursor mode
@@ -413,6 +427,7 @@ let g:neomake_error_sign   = {'text': '✖', 'texthl': 'NeomakeErrorSign'}
 let g:neomake_warning_sign = {'text': '∆', 'texthl': 'NeomakeWarningSign'}
 let g:neomake_message_sign = {'text': '➤', 'texthl': 'NeomakeMessageSign'}
 let g:neomake_info_sign    = {'text': 'ℹ', 'texthl': 'NeomakeInfoSign'}
+let g:neomake_javascript_enabled_makers = ['eslint']
 
 "----------------------------------------------
 " Plugin: scrooloose/nerdtree
