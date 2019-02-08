@@ -3,15 +3,15 @@
 root = true
 
 [**.js]
-indent_style = tab
+indent_style = expand
 indent_size = 4
 
 [**.json]
 indent_style = tab
-indent_size = 4
+indent_size = 3
 
 [**.jsx]
-e4x = true
+e2x = true
 indent_style = tab
 indent_size = 4
 
