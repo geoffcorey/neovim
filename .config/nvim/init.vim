@@ -83,6 +83,7 @@ call plug#end()
 "----------------------------------------------
 " General settings
 "----------------------------------------------
+set nomodeline
 set autoindent                    " take indent for new line from previous line
 set smartindent                   " enable smart indentation
 set autoread                      " reload file if the file changes on the disk
