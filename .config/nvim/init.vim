@@ -64,7 +64,7 @@ Plug 'dag/vim-fish'
 Plug 'digitaltoad/vim-pug'
 Plug 'fatih/vim-go'
 Plug 'buoto/gotests-vim'
-Plug 'fishbullet/deoplete-ruby'
+" Plug 'fishbullet/deoplete-ruby'
 Plug 'kchmck/vim-coffee-script'
 Plug 'kylef/apiblueprint.vim'
 Plug 'lifepillar/pgsql.vim'
@@ -72,9 +72,9 @@ Plug 'nsf/gocode', { 'rtp': 'vim', 'do': '~/.vim/plugged/gocode/vim/symlink.sh' 
 Plug 'plasticboy/vim-markdown'
 Plug 'ternjs/tern_for_vim', { 'do': 'npm install && npm install -g tern' }
 Plug 'tclh123/vim-thrift'
-Plug 'zchee/deoplete-go', { 'do': 'make'}
+" Plug 'zchee/deoplete-go', { 'do': 'make'}
 Plug 'zchee/deoplete-jedi'
-Plug 'carlitux/deoplete-ternjs'
+Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern' }
 " Colorschemes
 Plug 'NLKNguyen/papercolor-theme'
 
