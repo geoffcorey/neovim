@@ -39,21 +39,21 @@ Custom Vi setup
 
 ### Navigation
 
-* <S-Left> Previous Buffer
-* <S-Right> Next Buffer
+* \<S-Left\> Previous Buffer
+* \<S-Right\> Next Buffer
 
 * ,w buffer close
 
-* <c-h> TMUX Left
-* <c-j> TMUX Down
-* <c-k> TMUX Up
-* <c-l> TMUX Right
-* <c-\> TMUX Previousq
+* \<c-h\> TMUX Left
+* \<c-j\> TMUX Down
+* \<c-k\> TMUX Up
+* \<c-l\> TMUX Right
+* \<c-\\> TMUX Previousq
 
 ### Files
 
 * ,d Nerdtree toggle
-* <F2> Nerdtree toggle
+* \<F2\> Nerdtree toggle
 
 ### Splits
 
@@ -74,15 +74,15 @@ Custom Vi setup
 * ,a Codeaction selected
 * ,f Format selected code
 
-* <space>a diag
-* <space>e ext
-* <apace>o outline
-* <space>s symbols
-* <space>j next
-* <space>k prev
-* <space>p list resume
+* \<space\>a diag
+* \<space\>e ext
+* \<apace\>o outline
+* \<space\>s symbols
+* \<space\>j next
+* \<space\>k prev
+* \<space\>p list resume
 
-* <F3> Tag bar toggle
+* \<F3\> Tag bar toggle
 
 ### Commands
 
