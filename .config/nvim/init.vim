@@ -10,71 +10,76 @@
 call plug#begin('~/.vim/plugged')
 
 " Dependencies
-Plug 'Shougo/neocomplcache'        " Depenency for Shougo/neosnippet
-Plug 'godlygeek/tabular'           " This must come before plasticboy/vim-markdown
-Plug 'tpope/vim-rhubarb'           " Depenency for tpope/fugitive
+"Plug 'Shougo/neocomplcache'        " Depenency for Shougo/neosnippet
+"Plug 'godlygeek/tabular'           " This must come before plasticboy/vim-markdown
+"Plug 'tpope/vim-rhubarb'           " Depenency for tpope/fugitive
 
 " General plugins
-Plug 'MattesGroeger/vim-bookmarks'
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-Plug 'Shougo/neosnippet'
-Plug 'Shougo/neosnippet-snippets'  " Default snippets for many languages
-Plug 'Shougo/vimproc.vim', {'do' : 'make'}  " Needed to make sebdah/vim-delve work on Vim
-Plug 'Shougo/vimshell.vim'                  " Needed to make sebdah/vim-delve work on Vim
+"Plug 'MattesGroeger/vim-bookmarks'
+"Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+"Plug 'Shougo/neosnippet'
+"Plug 'Shougo/neosnippet-snippets'  " Default snippets for many languages
+"Plug 'Shougo/vimproc.vim', {'do' : 'make'}  " Needed to make sebdah/vim-delve work on Vim
+"Plug 'Shougo/vimshell.vim'                  " Needed to make sebdah/vim-delve work on Vim
 Plug 'bling/vim-airline'
 Plug 'chrisbra/NrrwRgn'
 Plug 'christoomey/vim-tmux-navigator'
-Plug 'ctrlpvim/ctrlp.vim'          " CtrlP is installed to support tag finding in vim-go
+"Plug 'ctrlpvim/ctrlp.vim'          " CtrlP is installed to support tag finding in vim-go
 Plug 'easymotion/vim-easymotion'
 Plug 'editorconfig/editorconfig-vim'
-Plug 'itchyny/calendar.vim'
+"Plug 'itchyny/calendar.vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
-Plug 'junegunn/goyo.vim'
-Plug 'junegunn/vader.vim'
+"Plug 'junegunn/goyo.vim'
+"Plug 'junegunn/vader.vim'
 Plug 'majutsushi/tagbar'
-Plug 'mhinz/vim-signify'
-Plug 'mileszs/ack.vim'
-Plug 'neomake/neomake'
+"Plug 'mhinz/vim-signify'
+"Plug 'mileszs/ack.vim'
+"Plug 'neomake/neomake'
 Plug 'rbgrouleff/bclose.vim'
-Plug 'sbdchd/neoformat'
+"Plug 'sbdchd/neoformat'
 Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/nerdtree'
-Plug 'sebdah/vim-delve'
+Plug 'ryanoasis/vim-devicons'
+"Plug 'sebdah/vim-delve'
 " Plug 'sheerun/vim-polyglot'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
-" Plug 'vimwiki/vimwiki'
-Plug 'w0rp/ale'
+Plug 'vimwiki/vimwiki'
+"Plug 'w0rp/ale'
 
 " Language support
 Plug 'ludovicchabant/vim-gutentags' " <C-j>
-Plug 'nikvdp/ejs-syntax'
-Plug 'pangloss/vim-javascript'
-Plug 'maksimr/vim-jsbeautify'
-Plug 'mxw/vim-jsx'
-Plug 'jelera/vim-javascript-syntax'
-Plug 'tpope/vim-jdaddy' "Json text objects
-Plug 'tweekmonster/braceless.vim' " text objects and more for Python and other indented code
-let g:jsx_ext_required = 0
-Plug 'aklt/plantuml-syntax'
-Plug 'cespare/vim-toml'
-Plug 'dag/vim-fish'
-Plug 'digitaltoad/vim-pug'
-Plug 'fatih/vim-go'
-Plug 'buoto/gotests-vim'
-" Plug 'fishbullet/deoplete-ruby'
-Plug 'kchmck/vim-coffee-script'
-Plug 'kylef/apiblueprint.vim'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+let g:coc_global_extensions = ['coc-actions', 'coc-emmet', 'coc-css', 'coc-eslint', 'coc-html', 'coc-json', 'coc-prettier', 'coc-stylelint', 'coc-tsserver']
+
+"Plug 'nikvdp/ejs-syntax'
+"Plug 'pangloss/vim-javascript'
+"Plug 'maksimr/vim-jsbeautify'
+"Plug 'mxw/vim-jsx'
+"Plug 'jelera/vim-javascript-syntax'
+"Plug 'tpope/vim-jdaddy' "Json text objects
+"Plug 'tweekmonster/braceless.vim' " text objects and more for Python and other indented code
+"let g:jsx_ext_required = 0
+"Plug 'aklt/plantuml-syntax'
+"Plug 'cespare/vim-toml'
+"Plug 'dag/vim-fish'
+"Plug 'digitaltoad/vim-pug'
+"Plug 'fatih/vim-go'
+"
+"Plug 'buoto/gotests-vim'
+"Plug 'fishbullet/deoplete-ruby'
+"Plug 'kchmck/vim-coffee-script'
+"Plug 'kylef/apiblueprint.vim'
 Plug 'lifepillar/pgsql.vim'
-Plug 'nsf/gocode', { 'rtp': 'vim', 'do': '~/.vim/plugged/gocode/vim/symlink.sh' }
-Plug 'plasticboy/vim-markdown'
-Plug 'ternjs/tern_for_vim', { 'do': 'npm install && npm install -g tern' }
+"Plug 'nsf/gocode', { 'rtp': 'vim', 'do': '~/.vim/plugged/gocode/vim/symlink.sh' }
+"Plug 'plasticboy/vim-markdown'
+"Plug 'ternjs/tern_for_vim', { 'do': 'npm install && npm install -g tern' }
 Plug 'tclh123/vim-thrift'
 " Plug 'zchee/deoplete-go', { 'do': 'make'}
-Plug 'zchee/deoplete-jedi'
-Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern' }
+"Plug 'zchee/deoplete-jedi'
+"Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern' }
 " Colorschemes
 Plug 'NLKNguyen/papercolor-theme'
 
@@ -140,7 +145,7 @@ autocmd BufLeave * silent! :wa
 autocmd BufWritePre * :%s/\s\+$//e
 
 " Center the screen quickly
-nnoremap <space> zz
+"nnoremap <space> zz
 
 "----------------------------------------------
 " Colors
@@ -221,7 +226,7 @@ nnoremap <leader>h :split<cr>
 " Closing splits
 nnoremap <leader>q :close<cr>
 
-"----------------------------------------------
+"------------------/----------------------------
 " Plugin: MattesGroeger/vim-bookmarks
 "----------------------------------------------
 " Auto save bookmarks
@@ -259,35 +264,177 @@ function! BookmarkUnmapKeys()
 endfunction
 autocmd BufEnter * :call BookmarkMapKeys()
 autocmd BufEnter NERD_tree_* :call BookmarkUnmapKeys()
+autocmd BufEnter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+"----------------------------------------------
+" Plugin: neoclide/coc.nvim
+" ---------------------------------------------
+" TextEdit might fail if hidden is not set.
+set hidden
 
+" Some servers have issues with backup files, see #649.
+set nobackup
+set nowritebackup
+
+" Give more space for displaying messages.
+set cmdheight=2
+
+" Having longer updatetime (default is 4000 ms = 4 s) leads to noticeable
+" delays and poor user experience.
+set updatetime=300
+
+" Don't pass messages to |ins-completion-menu|.
+set shortmess+=c
+
+" Always show the signcolumn, otherwise it would shift the text each time
+" diagnostics appear/become resolved.
+set signcolumn=yes
+
+" Use tab for trigger completion with characters ahead and navigate.
+" NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
+" other plugin before putting this into your config.
+inoremap <silent><expr> <TAB>
+      \ pumvisible() ? "\<C-n>" :
+      \ <SID>check_back_space() ? "\<TAB>" :
+      \ coc#refresh()
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
+
+" Use <c-space> to trigger completion.
+inoremap <silent><expr> <c-space> coc#refresh()
+
+" Use <cr> to confirm completion, `<C-g>u` means break undo chain at current
+" position. Coc only does snippet and additional edit on confirm.
+if exists('*complete_info')
+  inoremap <expr> <cr> complete_info()["selected"] != "-1" ? "\<C-y>" : "\<C-g>u\<CR>"
+else
+  imap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+endif
+
+" Use `[g` and `]g` to navigate diagnostics
+nmap <silent> [g <Plug>(coc-diagnostic-prev)
+nmap <silent> ]g <Plug>(coc-diagnostic-next)
+
+" GoTo code navigation.
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
+
+" Use K to show documentation in preview window.
+nnoremap <silent> K :call <SID>show_documentation()<CR>
+
+function! s:show_documentation()
+  if (index(['vim','help'], &filetype) >= 0)
+    execute 'h '.expand('<cword>')
+  else
+    call CocAction('doHover')
+  endif
+endfunction
+
+" Highlight the symbol and its references when holding the cursor.
+autocmd CursorHold * silent call CocActionAsync('highlight')
+
+" Symbol renaming.
+nmap <leader>rn <Plug>(coc-rename)
+
+" Formatting selected code.
+xmap <leader>f  <Plug>(coc-format-selected)
+nmap <leader>f  <Plug>(coc-format-selected)
+
+augroup mygroup
+  autocmd!
+  " Setup formatexpr specified filetype(s).
+  autocmd FileType typescript,json setl formatexpr=CocAction('formatSelected')
+  " Update signature help on jump placeholder.
+  autocmd User CocJumpPlaceholder call CocActionAsync('showSignatureHelp')
+augroup end
+
+" Applying codeAction to the selected region.
+" Example: `<leader>aap` for current paragraph
+xmap <leader>a  <Plug>(coc-codeaction-selected)
+nmap <leader>a  <Plug>(coc-codeaction-selected)
+
+" Remap keys for applying codeAction to the current line.
+nmap <leader>ac  <Plug>(coc-codeaction)
+" Apply AutoFix to problem on the current line.
+nmap <leader>qf  <Plug>(coc-fix-current)
+
+" Introduce function text object
+" NOTE: Requires 'textDocument.documentSymbol' support from the language server.
+xmap if <Plug>(coc-funcobj-i)
+xmap af <Plug>(coc-funcobj-a)
+omap if <Plug>(coc-funcobj-i)
+omap af <Plug>(coc-funcobj-a)
+
+" Use <TAB> for selections ranges.
+" NOTE: Requires 'textDocument/selectionRange' support from the language server.
+" coc-tsserver, coc-python are the examples of servers that support it.
+"nmap <silent> <TAB> <Plug>(coc-range-select)
+xmap <silent> <TAB> <Plug>(coc-range-select)
+
+" Add `:Format` command to format current buffer.
+command! -nargs=0 Format :call CocAction('format')
+nmap
+" Add `:Fold` command to fold current buffer.
+command! -nargs=? Fold :call     CocAction('fold', <f-args>)
+
+" Add `:OR` command for organize imports of the current buffer.
+command! -nargs=0 OR   :call     CocAction('runCommand', 'editor.action.organizeImport')
+
+" Add (Neo)Vim's native statusline support.
+" NOTE: Please see `:h coc-status` for integrations with external plugins that
+" provide custom statusline: lightline.vim, vim-airline.
+set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
+
+" Mappings using CoCList:
+" Show all diagnostics.
+nnoremap <silent> <space>a  :<C-u>CocList diagnostics<cr>
+" Manage extensions.
+nnoremap <silent> <space>e  :<C-u>CocList extensions<cr>
+" Show commands.
+nnoremap <silent> <space>c  :<C-u>CocList commands<cr>
+" Find symbol of current document.
+nnoremap <silent> <space>o  :<C-u>CocList outline<cr>
+" Search workspace symbols.
+nnoremap <silent> <space>s  :<C-u>CocList -I symbols<cr>
+" Do default action for next item.
+nnoremap <silent> <space>j  :<C-u>CocNext<CR>
+" Do default action for previous item.
+nnoremap <silent> <space>k  :<C-u>CocPrev<CR>
+" Resume latest coc list.
+nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
 "----------------------------------------------
 " Plugin: Shougo/deoplete.nvim
 "----------------------------------------------
-if has('nvim')
-    " Enable deoplete on startup
-    let g:deoplete#enable_at_startup = 1
-    let g:deoplete#enable_ignore_case = 1
-    let g:deoplete#enable_smart_case = 1
-    let g:deoplete#enable_camel_case = 1
-    let g:deoplete#enable_refresh_always = 1
-    let g:deoplete#max_abbr_width = 0
-    let g:deoplete#max_menu_width = 0
-    let g:deoplete#omni#input_patterns = get(g:,'deoplete#omni#input_patterns',{})
+"if has('nvim')
+    "" Enable deoplete on startup
+    "let g:deoplete#enable_at_startup = 1
+    "let g:deoplete#enable_ignore_case = 1
+    "let g:deoplete#enable_smart_case = 1
+    "let g:deoplete#enable_camel_case = 1
+    "let g:deoplete#enable_refresh_always = 1
+    "let g:deoplete#max_abbr_width = 0
+    "let g:deoplete#max_menu_width = 0
+    "let g:deoplete#omni#input_patterns = get(g:,'deoplete#omni#input_patterns',{})
 
-    let g:tern_request_timeout = 1
-    let g:tern_request_timeout = 6000
-    let g:tern#command = ["tern"]
-    let g:tern#arguments = [" — persistent"]
-endif
+    "let g:tern_request_timeout = 1
+    "let g:tern_request_timeout = 6000
+    "let g:tern#command = ["tern"]
+    "let g:tern#arguments = [" — persistent"]
+"endif
 
-" Disable deoplete when in multi cursor mode
-function! Multiple_cursors_before()
-    let b:deoplete_disable_auto_complete = 1
-endfunction
+"" Disable deoplete when in multi cursor mode
+"function! Multiple_cursors_before()
+    "let b:deoplete_disable_auto_complete = 1
+"endfunction
 
-function! Multiple_cursors_after()
-    let b:deoplete_disable_auto_complete = 0
-endfunction
+"function! Multiple_cursors_after()
+    "let b:deoplete_disable_auto_complete = 0
+"endfunction
 
 "----------------------------------------------
 " Plugin: bling/vim-airline
@@ -341,7 +488,7 @@ nnoremap <silent> <c-\> :TmuxNavigatePrevious<cr>
 " it to run GoDecls(Dir).
 
 " Disable the CtrlP mapping, since we want to use FZF instead for <c-p>.
-let g:ctrlp_map = ''
+"let g:ctrlp_map = ''
 
 "----------------------------------------------
 " Plugin: easymotion/vim-easymotion
@@ -354,16 +501,21 @@ nmap <leader><leader>w <Plug>(easymotion-overwin-w)
 " Plugin: 'itchyny/calendar.vim'
 "----------------------------------------------
 " Enable Google Calendar integration.
-let g:calendar_google_calendar = 1
+"let g:calendar_google_calendar = 1
 
 " Enable Google Tasks integration.
-let g:calendar_google_task = 1
+"let g:calendar_google_task = 1
 
 "----------------------------------------------
 " Plugin: 'junegunn/fzf.vim'
 "----------------------------------------------
-nnoremap <c-p> :FZF<cr>
-
+nnoremap <C-p> :FZF<cr>
+let g:fzf_action = {
+    \ 'ctrl-t': 'tab split',
+    \ 'ctrl-s': 'split',
+    \ 'ctrl-v': 'vsplit'
+    \}
+let $FZF_DEFAULT_COMMAND = 'ag -g ""'
 "----------------------------------------------
 " Plugin: 'majutsushi/tagbar'
 "----------------------------------------------
@@ -395,7 +547,7 @@ let g:tagbar_type_go = {
     \ 'scope2kind' : {
         \ 'ctype' : 't',
         \ 'ntype' : 'n'
-    \ },
+   \ },
     \ 'ctagsbin'  : 'gotags',
     \ 'ctagsargs' : '-sort -silent'
 \ }
@@ -419,17 +571,17 @@ nnoremap <leader>w :Bclose<cr>
 " Plugin: mileszs/ack.vim
 "----------------------------------------------
 " Open ack
-nnoremap <leader>a :Ack!<space>
+"nnoremap <leader>a :Ack!<space>
 
 "----------------------------------------------
 " Plugin: neomake/neomake
 "----------------------------------------------
 " Configure signs.
-let g:neomake_error_sign   = {'text': '✖', 'texthl': 'NeomakeErrorSign'}
-let g:neomake_warning_sign = {'text': '∆', 'texthl': 'NeomakeWarningSign'}
-let g:neomake_message_sign = {'text': '➤', 'texthl': 'NeomakeMessageSign'}
-let g:neomake_info_sign    = {'text': 'ℹ', 'texthl': 'NeomakeInfoSign'}
-let g:neomake_javascript_enabled_makers = ['eslint']
+"let g:neomake_error_sign   = {'text': '✖', 'texthl': 'NeomakeErrorSign'}
+"let g:neomake_warning_sign = {'text': '∆', 'texthl': 'NeomakeWarningSign'}
+"let g:neomake_message_sign = {'text': '➤', 'texthl': 'NeomakeMessageSign'}
+"let g:neomake_info_sign    = {'text': 'ℹ', 'texthl': 'NeomakeInfoSign'}
+"let g:neomake_javascript_enabled_makers = ['eslint']
 
 "----------------------------------------------
 " Plugin: scrooloose/nerdtree
@@ -460,7 +612,7 @@ let g:NERDTreeChDirMode = 2
 " Plugin: sebdah/vim-delve
 "----------------------------------------------
 " Set the Delve backend.
-let g:delve_backend = "native"
+"let g:delve_backend = "native"
 
 "----------------------------------------------
 " Plugin: Shougo/neosnippet
@@ -470,17 +622,17 @@ let g:delve_backend = "native"
 "
 " Below you can disable default snippets for specific languages. If you set the
 " language to _ it sets the default for all languages.
-let g:neosnippet#disable_runtime_snippets = {
-    \ 'go': 1
-\}
+"let g:neosnippet#disable_runtime_snippets = {
+"    \ 'go': 1
+"\}
 
 " Keybindings
-imap <C-k> <Plug>(neosnippet_expand_or_jump)
-smap <C-k> <Plug>(neosnippet_expand_or_jump)
-xmap <C-k> <Plug>(neosnippet_expand_target)
+"imap <C-k> <Plug>(neosnippet_expand_or_jump)
+"smap <C-k> <Plug>(neosnippet_expand_or_jump)
+"xmap <C-k> <Plug>(neosnippet_expand_target)
 
 " Set the path to our snippets
-let g:neosnippet#snippets_directory='~/.config/nvim/snippets'
+"let g:neosnippet#snippets_directory='~/.config/nvim/snippets'
 
 "----------------------------------------------
 " Plugin: vimwiki/vimwiki
@@ -506,112 +658,112 @@ let g:multi_cursor_skip_key='<C-b>'
 " Plugin: zchee/deoplete-go
 "----------------------------------------------
 " Enable completing of go pointers
-let g:deoplete#sources#go#pointer = 1
+"let g:deoplete#sources#go#pointer = 1
 "----------------------------------------------
 " Language: Javascript
 "----------------------------------------------
 ".vimrc
-map <c-f> :call JsBeautify()<cr>
-" or
-au FileType javascript noremap <buffer>  <c-f> :call JsBeautify()<cr>
-" for json
-au FileType json noremap <buffer> <c-f> :call JsonBeautify()<cr>
-" for jsx
-au FileType jsx noremap <buffer> <c-f> :call JsxBeautify()<cr>
-" for html
-au FileType html noremap <buffer> <c-f> :call HtmlBeautify()<cr>
-" for css or scss
-au FileType css noremap <buffer> <c-f> :call CSSBeautify()<cr>
+"map <c-f> :call JsBeautify()<cr>
+"" or
+"au FileType javascript noremap <buffer>  <c-f> :call JsBeautify()<cr>
+"" for json
+"au FileType json noremap <buffer> <c-f> :call JsonBeautify()<cr>
+"" for jsx
+"au FileType jsx noremap <buffer> <c-f> :call JsxBeautify()<cr>
+"" for html
+"au FileType html noremap <buffer> <c-f> :call HtmlBeautify()<cr>
+"" for css or scss
+"au FileType css noremap <buffer> <c-f> :call CSSBeautify()<cr>
 "----------------------------------------------
 " Language: Golang
 "----------------------------------------------
 " Mappings
-au FileType go nmap <F9> :GoCoverageToggle -short<cr>
-au FileType go nmap <F10> :GoTest -short<cr>
-au FileType go nmap <F12> <Plug>(go-def)
-au Filetype go nmap <leader>ga <Plug>(go-alternate-edit)
-au Filetype go nmap <leader>gah <Plug>(go-alternate-split)
-au Filetype go nmap <leader>gav <Plug>(go-alternate-vertical)
-au FileType go nmap <leader>gt :GoDeclsDir<cr>
-au FileType go nmap <leader>gc <Plug>(go-coverage-toggle)
-"au FileType go nmap <leader>gd <Plug>(go-def)
-au FileType go nmap <leader>gd <Plug>(go-def-vertical)
-"au FileType go nmap <leader>gdv <Plug>(go-def-vertical)
-"au FileType go nmap <leader>gdh <Plug>(go-def-horizontal)
-au FileType go nmap <leader>gD <Plug>(go-doc)
-au FileType go nmap <leader>gDv <Plug>(go-doc-vertical)
+"au FileType go nmap <F9> :GoCoverageToggle -short<cr>
+"au FileType go nmap <F10> :GoTest -short<cr>
+"au FileType go nmap <F12> <Plug>(go-def)
+"au Filetype go nmap <leader>ga <Plug>(go-alternate-edit)
+"au Filetype go nmap <leader>gah <Plug>(go-alternate-split)
+"au Filetype go nmap <leader>gav <Plug>(go-alternate-vertical)
+"au FileType go nmap <leader>gt :GoDeclsDir<cr>
+"au FileType go nmap <leader>gc <Plug>(go-coverage-toggle)
+""au FileType go nmap <leader>gd <Plug>(go-def)
+"au FileType go nmap <leader>gd <Plug>(go-def-vertical)
+""au FileType go nmap <leader>gdv <Plug>(go-def-vertical)
+""au FileType go nmap <leader>gdh <Plug>(go-def-horizontal)
+"au FileType go nmap <leader>gD <Plug>(go-doc)
+"au FileType go nmap <leader>gDv <Plug>(go-doc-vertical)
 
-" Run goimports when running gofmt
-let g:go_fmt_command = "goimports"
+"" Run goimports when running gofmt
+"let g:go_fmt_command = "goimports"
 
-" Set neosnippet as snippet engine
-let g:go_snippet_engine = "neosnippet"
+"" Set neosnippet as snippet engine
+"let g:go_snippet_engine = "neosnippet"
 
-" Enable syntax highlighting per default
-let g:go_highlight_types = 1
-let g:go_highlight_fields = 1
-let g:go_highlight_functions = 1
-let g:go_highlight_methods = 1
-let g:go_highlight_structs = 1
-let g:go_highlight_operators = 1
-let g:go_highlight_build_constraints = 1
-let g:go_highlight_extra_types = 1
+"" Enable syntax highlighting per default
+"let g:go_highlight_types = 1
+"let g:go_highlight_fields = 1
+"let g:go_highlight_functions = 1
+"let g:go_highlight_methods = 1
+"let g:go_highlight_structs = 1
+"let g:go_highlight_operators = 1
+"let g:go_highlight_build_constraints = 1
+"let g:go_highlight_extra_types = 1
 
-" Show the progress when running :GoCoverage
-let g:go_echo_command_info = 1
+"" Show the progress when running :GoCoverage
+"let g:go_echo_command_info = 1
 
-" Show type information
-let g:go_auto_type_info = 1
+"" Show type information
+"let g:go_auto_type_info = 1
 
-" Highlight variable uses
-let g:go_auto_sameids = 1
+"" Highlight variable uses
+"let g:go_auto_sameids = 1
 
-" Fix for location list when vim-go is used together with Syntastic
-let g:go_list_type = "quickfix"
+"" Fix for location list when vim-go is used together with Syntastic
+"let g:go_list_type = "quickfix"
 
-" gometalinter configuration
-let g:go_metalinter_command = ""
-let g:go_metalinter_deadline = "5s"
-let g:go_metalinter_enabled = [
-    \ 'deadcode',
-    \ 'errcheck',
-    \ 'gas',
-    \ 'goconst',
-    \ 'gocyclo',
-    \ 'golint',
-    \ 'gosimple',
-    \ 'ineffassign',
-    \ 'vet',
-    \ 'vetshadow'
-\]
+"" gometalinter configuration
+"let g:go_metalinter_command = ""
+"let g:go_metalinter_deadline = "5s"
+"let g:go_metalinter_enabled = [
+"    \ 'deadcode',
+"    \ 'errcheck',
+"    \ 'gas',
+"    \ 'goconst',
+"    \ 'gocyclo',
+"    \ 'golint',
+"    \ 'gosimple',
+"    \ 'ineffassign',
+"    \ 'vet',
+"    \ 'vetshadow'
+"\]
 
-" Set whether the JSON tags should be snakecase or camelcase.
-let g:go_addtags_transform = "snakecase"
+"" Set whether the JSON tags should be snakecase or camelcase.
+"let g:go_addtags_transform = "snakecase"
 
-" neomake configuration for Go.
-let g:neomake_go_enabled_makers = [ 'go', 'gometalinter' ]
-let g:neomake_go_gometalinter_maker = {
-  \ 'args': [
-  \   '--tests',
-  \   '--enable-gc',
-  \   '--concurrency=3',
-  \   '--fast',
-  \   '-D', 'aligncheck',
-  \   '-D', 'dupl',
-  \   '-D', 'gocyclo',
-  \   '-D', 'gotype',
-  \   '-E', 'errcheck',
-  \   '-E', 'misspell',
-  \   '-E', 'unused',
-  \   '%:p:h',
-  \ ],
-  \ 'append_file': 0,
-  \ 'errorformat':
-  \   '%E%f:%l:%c:%trror: %m,' .
-  \   '%W%f:%l:%c:%tarning: %m,' .
-  \   '%E%f:%l::%trror: %m,' .
-  \   '%W%f:%l::%tarning: %m'
-  \ }
+"" neomake configuration for Go.
+"let g:neomake_go_enabled_makers = [ 'go', 'gometalinter' ]
+"let g:neomake_go_gometalinter_maker = {
+"  \ 'args': [
+"  \   '--tests',
+"  \   '--enable-gc',
+"  \   '--concurrency=3',
+"  \   '--fast',
+"  \   '-D', 'aligncheck',
+"  \   '-D', 'dupl',
+"  \   '-D', 'gocyclo',
+"  \   '-D', 'gotype',
+"  \   '-E', 'errcheck',
+"  \   '-E', 'misspell',
+"  \   '-E', 'unused',
+"  \   '%:p:h',
+"  \ ],
+"  \ 'append_file': 0,
+"  \ 'errorformat':
+"  \   '%E%f:%l:%c:%trror: %m,' .
+"  \   '%W%f:%l:%c:%tarning: %m,' .
+"  \   '%E%f:%l::%trror: %m,' .
+"  \   '%W%f:%l::%tarning: %m'
+"  \ }
 
 "----------------------------------------------
 " Language: apiblueprint
