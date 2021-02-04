@@ -407,6 +407,7 @@ nnoremap <silent> <space>j  :<C-u>CocNext<CR>
 nnoremap <silent> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list.
 nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
+
 "----------------------------------------------
 " Plugin: Shougo/deoplete.nvim
 "----------------------------------------------
@@ -831,13 +832,13 @@ au FileType html set tabstop=2
 " Language: JavaScript
 "----------------------------------------------
 au FileType javascript set expandtab
-au FileType javascript set shiftwidth=4
-au FileType javascript set softtabstop=4
-au FileType javascript set tabstop=4
+"au FileType javascript set shiftwidth=4
+"au FileType javascript set softtabstop=4
+"au FileType javascript set tabstop=4
 "au FileType javascript set expandtab
-"au FileType javascript set shiftwidth=2
-"au FileType javascript set softtabstop=2
-"au FileType javascript set tabstop=2
+au FileType javascript set shiftwidth=2
+au FileType javascript set softtabstop=2
+au FileType javascript set tabstop=2
 
 "----------------------------------------------
 " Language: JSON
