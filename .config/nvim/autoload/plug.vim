@@ -749,24 +749,6 @@ function! s:parse_options(arg)
         throw printf(opt_errfmt, 'do', 'string or funcref')
     endif
     call extend(opts, a:arg)
-    for opt in ['branch', 'tag', 'commit', 'rtp', 'dir', 'as']
-      if has_key(opts, opt)
-      \ && (type(opts[opt]) != s:TYPE.string || empty(opts[opt]))
-        throw printf(opt_errfmt, opt, 'string')
-      endif
-    endfor
-    for opt in ['on', 'for']
-      if has_key(opts, opt)
-      \ && type(opts[opt]) != s:TYPE.list
-      \ && (type(opts[opt]) != s:TYPE.string || empty(opts[opt]))
-        throw printf(opt_errfmt, opt, 'string or list')
-      endif
-    endfor
-    if has_key(opts, 'do')
-      \ && type(opts.do) != s:TYPE.funcref
-      \ && (type(opts.do) != s:TYPE.string || empty(opts.do))
-        throw printf(opt_errfmt, 'do', 'string or funcref')
-    endif
     if has_key(opts, 'dir')
       let opts.dir = s:dirpath(s:plug_expand(opts.dir))
     endif
@@ -1094,14 +1076,9 @@ endfunction
 
 function! s:checkout(spec)
   let sha = a:spec.commit
-<<<<<<< HEAD
-  let output = s:system(['git', 'rev-parse', 'HEAD'], a:spec.dir)
-  if !v:shell_error && !s:hash_match(sha, s:lines(output)[0])
-=======
   let output = s:git_revision(a:spec.dir)
   if !empty(output) && !s:hash_match(sha, s:lines(output)[0])
     let credential_helper = s:git_version_requirement(2) ? '-c credential.helper= ' : ''
->>>>>>> 1be830181e01bc6f0884bad93d47dc7de642c003
     let output = s:system(
           \ 'git '.credential_helper.'fetch --depth 999999 && git checkout '.plug#shellescape(sha).' --', a:spec.dir)
   endif
@@ -1555,11 +1532,7 @@ while 1 " Without TCO, Vim stack is bound to explode
     let [error, _] = s:git_validate(spec, 0)
     if empty(error)
       if pull
-<<<<<<< HEAD
-        let cmd = ['git', 'fetch']
-=======
         let cmd = s:git_version_requirement(2) ? ['git', '-c', 'credential.helper=', 'fetch'] : ['git', 'fetch']
->>>>>>> 1be830181e01bc6f0884bad93d47dc7de642c003
         if has_tag && !empty(globpath(spec.dir, '.git/shallow'))
           call extend(cmd, ['--depth', '99999999'])
         endif
@@ -2359,11 +2332,7 @@ function! s:git_validate(spec, check_branch)
       if empty(err)
         let [ahead, behind] = split(s:lastline(s:system([
         \ 'git', 'rev-list', '--count', '--left-right',
-<<<<<<< HEAD
-        \ printf('HEAD...origin/%s', a:spec.branch)
-=======
         \ printf('HEAD...origin/%s', origin_branch)
->>>>>>> 1be830181e01bc6f0884bad93d47dc7de642c003
         \ ], a:spec.dir)), '\t')
         if !v:shell_error && ahead
           if behind
@@ -2705,22 +2674,6 @@ function! s:diff()
     endif
     call s:append_ul(2, origin ? 'Pending updates:' : 'Last update:')
     for [k, v] in plugs
-<<<<<<< HEAD
-      let range = origin ? '..origin/'.v.branch : 'HEAD@{1}..'
-      let cmd = ['git', 'log', '--graph', '--color=never']
-      if s:git_version_requirement(2, 10, 0)
-        call add(cmd, '--no-show-signature')
-      endif
-      call extend(cmd, ['--pretty=format:%x01%h%x01%d%x01%s%x01%cr', range])
-      if has_key(v, 'rtp')
-        call extend(cmd, ['--', v.rtp])
-      endif
-      let diff = s:system_chomp(cmd, v.dir)
-      if !empty(diff)
-        let ref = has_key(v, 'tag') ? (' (tag: '.v.tag.')') : has_key(v, 'commit') ? (' '.v.commit) : ''
-        call append(5, extend(['', '- '.k.':'.ref], map(s:lines(diff), 's:format_git_log(v:val)')))
-        let cnts[origin] += 1
-=======
       let branch = s:git_origin_branch(v)
       if len(branch)
         let range = origin ? '..origin/'.branch : 'HEAD@{1}..'
@@ -2738,7 +2691,6 @@ function! s:diff()
           call append(5, extend(['', '- '.k.':'.ref], map(s:lines(diff), 's:format_git_log(v:val)')))
           let cnts[origin] += 1
         endif
->>>>>>> 1be830181e01bc6f0884bad93d47dc7de642c003
       endif
       let bar .= '='
       call s:progress_bar(2, bar, len(total))
