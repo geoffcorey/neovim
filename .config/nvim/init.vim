@@ -82,7 +82,8 @@ Plug 'tclh123/vim-thrift'
 "Plug 'zchee/deoplete-jedi'
 "Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern' }
 " Colorschemes
-Plug 'NLKNguyen/papercolor-theme'
+"Plug 'NLKNguyen/papercolor-theme'
+Plug 'morhetz/gruvbox'
 
 call plug#end()
 
@@ -132,7 +133,7 @@ endif
 if has('mouse')
     set mouse=a
 endif
-
+" set ttymouse=sgr
 " Allow vim to set a custom font or color for a word
 syntax enable
 
@@ -152,7 +153,7 @@ autocmd BufWritePre * :%s/\s\+$//e
 " Colors
 "----------------------------------------------
 set background=dark
-colorscheme PaperColor
+colorscheme gruvbox
 
 " Override the search highlight color with a combination that is easier to
 " read. The default PaperColor is dark green backgroun with black foreground.
@@ -163,7 +164,13 @@ highlight Search guibg=DeepPink4 guifg=White ctermbg=53 ctermfg=White
 
 " Toggle background with <leader>bg
 map <leader>bg :let &background = (&background == "dark"? "light" : "dark")<cr>
+nnoremap <silent> [oh :call gruvbox#hls_show()<CR>
+nnoremap <silent> ]oh :call gruvbox#hls_hide()<CR>
+nnoremap <silent> coh :call gruvbox#hls_toggle()<CR>
 
+nnoremap * :let @/ = ""<CR>:call gruvbox#hls_show()<CR>*
+nnoremap / :let @/ = ""<CR>:call gruvbox#hls_show()<CR>/
+nnoremap ? :let @/ = ""<CR>:call gruvbox#hls_show()<CR>?
 "----------------------------------------------
 " Searching
 "----------------------------------------------
